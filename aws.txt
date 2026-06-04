@@ -1,0 +1,98 @@
+🔥 Advanced AWS Interview Questions (Real-World + Scenario-Based)
+
+If you already know AWS basics, interviews will focus on how you design, secure, and troubleshoot real systems 👇
+
+Here are some advanced AWS questions frequently asked in DevOps/SRE interviews 👇
+
+---
+
+☁️ Architecture & Design
+
+🔹 How do you design a highly available and fault-tolerant architecture in AWS?
+🔹 What is the difference between Multi-AZ vs Multi-Region?
+🔹 How do you design a scalable system for high traffic applications?
+🔹 What are stateless vs stateful architectures in cloud?
+
+---
+
+🌐 Networking (Very Important)
+
+🔹 Explain VPC architecture in detail
+🔹 Difference between Security Groups vs NACLs
+🔹 How does internet gateway vs NAT gateway work?
+🔹 What is VPC Peering vs Transit Gateway (real use case)?
+🔹 How does routing work inside a VPC?
+
+---
+
+⚙️ Compute & Scaling
+
+🔹 Difference between Auto Scaling Group vs Load Balancer
+🔹 How does Auto Scaling decide when to scale?
+🔹 What are launch templates vs launch configurations?
+🔹 How do you handle zero downtime deployments in EC2-based apps?
+
+---
+
+💾 Storage
+
+🔹 Difference between EBS vs EFS vs S3
+🔹 What are different S3 storage classes and use cases?
+🔹 How does S3 versioning & lifecycle policies work?
+🔹 What is data durability in S3 (11 9’s)?
+
+---
+
+🔐 Security (Highly Important)
+
+🔹 How does IAM work internally?
+🔹 Difference between roles vs policies vs users
+🔹 What is least privilege principle?
+🔹 How do you manage secrets securely in AWS?
+
+---
+
+🌍 DNS & Traffic Management
+
+🔹 Explain Route 53 routing policies (weighted, latency, failover)
+🔹 How does failover routing work in real scenarios?
+🔹 How do you achieve blue/green deployment using Route 53?
+
+---
+
+📊 Monitoring & Logging
+
+🔹 Difference between CloudWatch metrics vs logs
+🔹 How do you set up alerts for production systems?
+🔹 How do you debug high latency or downtime in AWS apps?
+
+---
+
+💰 Cost Optimization (Interview Favorite)
+
+🔹 How do you reduce AWS cost in production?
+🔹 What are Reserved Instances vs Spot Instances?
+🔹 How do you identify unused resources?
+
+---
+
+🚨 Troubleshooting / Scenarios
+
+🔹 EC2 instance is not reachable — how do you debug?
+🔹 Application is slow — what AWS components will you check?
+🔹 High bill suddenly — how do you investigate?
+🔹 Load balancer is up but traffic not reaching instances — why?
+
+---
+
+💡 Pro Tip:
+AWS interviews are less about services and more about:
+👉 “How do you design + debug + optimize systems?”
+
+---
+
+If you’re preparing for DevOps/SRE roles, these are must-know 🚀
+
+Which AWS topic do you find most challenging? 👇
+
+hashtag#AWS hashtag#DevOps hashtag#SRE hashtag#CloudComputing hashtag#Architecture hashtag#TechInterviews hashtag#Kubernetes hashtag#Cloud
