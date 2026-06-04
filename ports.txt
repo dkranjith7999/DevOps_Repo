@@ -65,5 +65,6 @@ netstat -tuln
 ss -tuln
 
 ---
+Important have a knowledge in port's 
 
 hashtag#DevOps hashtag#Networking hashtag#Linux hashtag#SRE hashtag#CloudComputing hashtag#Kubernetes hashtag#AWS hashtag#TechInterviews
