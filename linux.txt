@@ -1,0 +1,156 @@
+important Linux Commands Every DevOps/SRE Should Know (With Examples)
+
+Linux is everywhere in production — and interviews often test how well you use commands in real scenarios 👇
+
+Here are some must-know Linux commands with simple examples + explanations
+
+---
+
+📂 File & Directory Management
+
+🔹 "ls" → List files
+
+ls -l
+
+🔹 "cd" → Change directory
+
+cd /var/log
+
+🔹 "pwd" → Show current directory
+
+🔹 "mkdir" → Create directory
+
+mkdir test_dir
+
+🔹 "rm" → Remove files
+
+rm -rf test_dir
+
+---
+
+📄 File Viewing & Editing
+
+🔹 "cat" → View file content
+
+cat file.txt
+
+🔹 "less" → View large files
+
+less file.txt
+
+🔹 "head" / "tail" → First/last lines
+
+tail -f app.log # real-time logs
+
+---
+
+🔍 Search & Filtering
+
+🔹 "grep" → Search text
+
+grep "ERROR" app.log
+
+🔹 "find" → Find files
+
+find / -name "*.log"
+
+🔹 "awk" / "sed" → Text processing
+
+---
+
+⚙️ Process Management
+
+🔹 "ps" → Show processes
+
+ps aux | grep nginx
+
+🔹 "top" / "htop" → Real-time usage
+
+🔹 "kill" → Stop process
+
+kill -9 <pid>
+
+---
+
+💾 Disk & Memory
+
+🔹 "df -h" → Disk usage
+
+🔹 "du -sh" → Folder size
+
+du -sh /var/log
+
+🔹 "free -m" → Memory usage
+
+---
+
+🌐 Networking
+
+🔹 "ping" → Check connectivity
+
+🔹 "curl" → Call APIs
+
+curl http://localhost:8080
+
+🔹 "netstat" / "ss" → Check ports
+
+ss -tuln
+
+---
+
+🔐 Permissions
+
+🔹 "chmod" → Change permissions
+
+chmod 755 script.sh
+
+🔹 "chown" → Change owner
+
+---
+
+🔄 Service Management
+
+🔹 "systemctl" → Manage services
+
+systemctl status nginx
+systemctl restart nginx
+
+---
+
+📦 Compression
+
+🔹 "tar" → Archive files
+
+tar -czvf file.tar.gz folder/
+
+🔹 "zip/unzip" → Compress/uncompress
+
+---
+
+⚡ Pro DevOps Commands
+
+🔹 Check logs in real time:
+
+tail -f /var/log/syslog
+
+🔹 Find top CPU processes:
+
+ps -eo pid,cmd,%cpu --sort=-%cpu | head
+
+🔹 Find large files:
+
+find / -type f -size +100M
+
+---
+
+💡 Final Tip
+
+👉 Don’t just memorize commands
+👉 Understand when and why to use them
+
+
+---
+
+💬 Which Linux command do you use daily the most?
+
+hashtag#Linux hashtag#DevOps hashtag#SRE hashtag#CloudComputing hashtag#SystemAdministration hashtag#TechInterviews hashtag#AWS hashtag#Shell

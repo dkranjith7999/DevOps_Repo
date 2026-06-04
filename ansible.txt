@@ -1,0 +1,152 @@
+Important Ansible Commands Every DevOps Engineer Should Know
+
+Ansible is one of the most used automation tools in DevOps — and interviews often test how comfortable you are with its commands 👇
+
+Here are some important Ansible commands with simple explanations + examples 🚀
+
+---
+
+📂 Inventory Commands
+
+🔹 Check inventory hosts
+
+ansible all --list-hosts
+
+👉 Displays all managed hosts from inventory
+
+---
+
+🔍 Connectivity Testing
+
+🔹 Ping all servers
+
+ansible all -m ping
+
+👉 Verifies SSH connectivity and Ansible access
+
+💡 One of the first commands used in troubleshooting
+
+---
+
+⚙️ Ad-Hoc Commands
+
+🔹 Check uptime
+
+ansible all -a "uptime"
+
+🔹 Check disk usage
+
+ansible all -a "df -h"
+
+👉 Quick one-time tasks without playbooks
+
+---
+
+📦 Package Management
+
+🔹 Install nginx
+
+ansible webservers -m yum -a "name=nginx state=present"
+
+👉 Automates package installation across multiple servers
+
+---
+
+🔄 Service Management
+
+🔹 Start nginx service
+
+ansible webservers -m service -a "name=nginx state=started"
+
+🔹 Restart service
+
+ansible webservers -m service -a "name=nginx state=restarted"
+
+---
+
+📁 File Operations
+
+🔹 Copy file to servers
+
+ansible all -m copy -a "src=file.txt dest=/tmp/file.txt"
+
+🔹 Create directory
+
+ansible all -m file -a "path=/tmp/demo state=directory"
+
+---
+
+▶️ Playbook Execution
+
+🔹 Run playbook
+
+ansible-playbook site.yml
+
+👉 Main command for automation workflows
+
+---
+
+🔐 Vault Commands (Security)
+
+🔹 Encrypt sensitive file
+
+ansible-vault encrypt secrets.yml
+
+🔹 Edit encrypted file
+
+ansible-vault edit secrets.yml
+
+💡 Used for passwords, API keys, secrets
+
+---
+
+🏷️ Tags & Selective Execution
+
+🔹 Run specific tagged tasks
+
+ansible-playbook site.yml --tags nginx
+
+👉 Useful in large playbooks
+
+---
+
+🌍 Inventory Specific Execution
+
+🔹 Run on specific group
+
+ansible webservers -m ping
+
+🔹 Run on single host
+
+ansible server1 -m ping
+
+---
+
+🔎 Debugging & Dry Run
+
+🔹 Syntax check
+
+ansible-playbook site.yml --syntax-check
+
+🔹 Dry run mode
+
+ansible-playbook site.yml --check
+
+👉 Shows what changes would happen without applying them
+
+---
+
+💡 Real-World Usage
+
+👉 Typical flow:
+1️⃣ Test connectivity
+2️⃣ Run ad-hoc checks
+3️⃣ Execute playbooks
+4️⃣ Use Vault for secrets
+5️⃣ Debug failures using verbose mode
+
+---
+
+💬 Which Ansible command do you use most frequently?
+
+hashtag#Ansible hashtag#DevOps hashtag#Automation hashtag#SRE hashtag#Linux hashtag#CloudComputing hashtag#TechInterviews hashtag#ConfigurationManagement

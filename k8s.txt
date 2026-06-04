@@ -1,0 +1,198 @@
+☸️ Kubernetes Components Explained (Easy + Advanced Understanding for Interviews)
+
+Most people memorize Kubernetes components…
+👉 But interviews test if you understand how they actually work together
+
+Let’s break down Kubernetes architecture in a simple + real-world way 👇
+
+---
+
+🧠 Control Plane (Brain of Kubernetes)
+
+These components make decisions and manage the cluster
+
+---
+
+🔹 API Server
+
+👉 Entry point to Kubernetes
+
+- All commands ("kubectl", CI/CD, UI) go through API Server
+- Validates requests (auth + authorization)
+- Updates cluster state
+
+💡 Example:
+You run "kubectl apply" → API Server processes it
+
+---
+
+🔹 etcd
+
+👉 Key-value database (cluster state storage)
+
+- Stores:
+ - Pods
+ - Services
+ - Configurations
+- Source of truth
+
+⚠️ Advanced:
+
+- Needs backup & HA setup
+- If etcd is down → cluster becomes unstable
+
+---
+
+🔹 Scheduler
+
+👉 Decides where to run pods
+
+Checks:
+
+- CPU / Memory
+- Node conditions
+- Taints & tolerations
+- Affinity rules
+
+💡 Example:
+Pod needs 2 CPU → scheduled only on suitable node
+
+---
+
+🔹 Controller Manager
+
+👉 Ensures desired state = actual state
+
+Controllers:
+
+- Deployment Controller
+- ReplicaSet Controller
+- Node Controller
+
+💡 Example:
+If 1 pod crashes → controller creates a new one
+
+---
+
+⚙️ Worker Node Components (Execution Layer)
+
+These run your applications
+
+---
+
+🔹 Kubelet
+
+👉 Agent running on each node
+
+- Talks to API Server
+- Ensures containers are running
+- Reports node status
+
+💡 Think: “Node manager”
+
+---
+
+🔹 Container Runtime
+
+👉 Runs containers
+
+Examples:
+
+- containerd
+- CRI-O
+
+💡 Responsible for:
+
+- Pulling images
+- Running containers
+
+---
+
+🔹 kube-proxy
+
+👉 Handles network routing
+
+- Uses iptables / IPVS
+- Routes traffic from Service → Pods
+
+💡 Acts like internal load balancer
+
+---
+
+🌐 Networking Layer (Important)
+
+🔹 CNI (Container Network Interface)
+
+👉 Handles:
+
+- Pod IP allocation
+- Pod-to-pod communication
+
+Examples:
+
+- Calico
+- Flannel
+
+💡 Advanced:
+
+- Enables cross-node communication
+
+---
+
+🔄 How Everything Works Together (Flow)
+
+1️⃣ User → "kubectl apply"
+2️⃣ API Server → validates request
+3️⃣ etcd → stores desired state
+4️⃣ Scheduler → assigns node
+5️⃣ Kubelet → creates pod
+6️⃣ Container runtime → runs container
+7️⃣ kube-proxy + CNI → handle networking
+
+---
+
+🚀 Advanced Concepts (Interview Level)
+
+🔹 High Availability Control Plane
+
+- Multiple API servers
+- etcd cluster setup
+
+🔹 Leader Election
+
+- Only one controller acts as leader
+
+🔹 Horizontal Scaling
+
+- Add more nodes easily
+
+🔹 Self-Healing
+
+- Failed pods are recreated automatically
+
+🔹 Autoscaling
+
+- HPA (pods)
+- Cluster Autoscaler (nodes)
+
+---
+
+💡 Real-World Understanding
+
+👉 Kubernetes is basically:
+
+- API Server → Brain
+- etcd → Memory
+- Scheduler → Decision maker
+- Kubelet → Worker
+- kube-proxy → Traffic manager
+
+---
+
+🎯 Interview Tip
+
+Don’t just list components ❌
+Explain:
+👉 Flow + Responsibility + Real example
+
+hashtag#Kubernetes hashtag#K8s hashtag#DevOps hashtag#SRE hashtag#CloudComputing hashtag#Architecture hashtag#TechInterviews hashtag#AWS

@@ -1,0 +1,169 @@
+Terraform Commands Explained (Beyond Just Basics)
+
+Most people remember "init → plan → apply"…
+👉 But real DevOps work involves state management, debugging, and advanced commands
+
+Here’s a practical breakdown of important Terraform commands with real understanding 👇
+
+---
+
+🚀 Core Workflow Commands (Daily Use)
+
+🔹 "terraform init"
+👉 Initializes your project
+
+- Downloads providers
+- Sets up backend
+ 💡 Run this first in every project
+
+---
+
+🔹 "terraform plan"
+👉 Shows what changes will happen
+
+- No actual changes
+- Safe preview
+
+💡 Think: “What will Terraform do?”
+
+---
+
+🔹 "terraform apply"
+👉 Executes the changes
+
+- Creates/updates resources
+ 💡 Use "-auto-approve" in pipelines
+
+---
+
+🔹 "terraform destroy"
+👉 Deletes all managed infrastructure
+💡 Be careful — irreversible
+
+---
+
+🧹 Validation & Formatting
+
+🔹 "terraform validate"
+👉 Checks syntax and config correctness
+
+🔹 "terraform fmt"
+👉 Formats code (clean & readable)
+
+💡 Best practice: Run before commit
+
+---
+
+🔍 Debugging & Visibility
+
+🔹 "terraform show"
+👉 Displays current state or plan details
+
+🔹 "terraform output"
+👉 Shows output variables
+💡 Example: EC2 public IP
+
+---
+
+🔹 "terraform graph"
+👉 Visualizes dependency graph
+💡 Helpful for understanding complex infra
+
+---
+
+🔄 State Management (Very Important)
+
+🔹 "terraform state list"
+👉 Lists all managed resources
+
+🔹 "terraform state show <resource>"
+👉 Shows detailed info of a resource
+
+---
+
+🔹 "terraform state mv"
+👉 Move resource in state (refactoring)
+
+🔹 "terraform state rm"
+👉 Remove resource from state (not deleted in cloud)
+
+💡 Used when fixing state issues
+
+---
+
+🔗 Import & Drift Handling
+
+🔹 "terraform import"
+👉 Import existing resources into Terraform
+
+💡 Example:
+Manually created EC2 → bring under Terraform
+
+---
+
+🔹 "terraform refresh" (deprecated in newer versions but concept important)
+👉 Syncs state with real infra
+
+---
+
+⚠️ Resource Recreation
+
+🔹 "terraform taint"
+👉 Marks resource for recreation
+
+🔹 "terraform untaint"
+👉 Removes taint
+
+💡 Used when resource is corrupted
+
+---
+
+🌍 Workspaces (Multi-Environment)
+
+🔹 "terraform workspace new dev"
+🔹 "terraform workspace select prod"
+🔹 "terraform workspace list"
+
+👉 Helps manage dev / qa / prod environments
+
+---
+
+🔐 Advanced / Rare but Important
+
+🔹 "terraform providers"
+👉 Shows provider dependencies
+
+🔹 "terraform providers lock"
+👉 Locks provider versions
+
+---
+
+🔹 "terraform force-unlock <lock-id>"
+👉 Unlocks stuck state
+
+💡 Used when pipeline crashes and state is locked
+
+---
+
+🔹 "terraform console"
+👉 Interactive shell to test expressions
+
+💡 Useful for debugging variables
+
+---
+
+🧠 Real-World Flow
+
+👉 Typical usage in projects:
+
+1️⃣ "init" → setup
+2️⃣ "plan" → verify
+3️⃣ "apply" → deploy
+4️⃣ "state / output" → debug & verify
+5️⃣ "destroy" → cleanup (if needed)
+
+--
+
+💬 Which Terraform command do you use most in your daily work?
+
+hashtag#Terraform hashtag#DevOps hashtag#SRE hashtag#InfrastructureAsCode hashtag#AWS hashtag#Cloud hashtag#TechLearning hashtag#CICD
