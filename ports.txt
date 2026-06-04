@@ -1,0 +1,69 @@
+🔌 Common Default Ports Every DevOps/SRE Should Know
+
+In interviews and real-world troubleshooting, knowing default ports can save a lot of time 👇
+
+Here’s a quick reference of important ports with use cases
+
+---
+
+🌐 Web & Networking
+
+🔹 80 → HTTP
+🔹 443 → HTTPS
+🔹 53 → DNS
+🔹 21 → FTP
+🔹 22 → SSH
+🔹 25 → SMTP (Email sending)
+
+---
+
+🗄️ Databases
+
+🔹 3306 → MySQL
+🔹 5432 → PostgreSQL
+🔹 1433 → MS SQL Server
+🔹 27017 → MongoDB
+🔹 6379 → Redis
+
+---
+
+⚙️ DevOps Tools
+
+🔹 8080 → Jenkins / Apps
+🔹 9090 → Prometheus
+🔹 3000 → Grafana / Node apps
+🔹 5601 → Kibana
+🔹 9200 → Elasticsearch
+
+---
+
+☸️ Kubernetes
+
+🔹 6443 → Kubernetes API Server
+🔹 10250 → Kubelet
+🔹 30000–32767 → NodePort range
+
+---
+
+📡 Other Useful Ports
+
+🔹 3389 → RDP (Windows Remote Desktop)
+🔹 445 → SMB
+🔹 2049 → NFS
+
+---
+
+💡 Real-World Usage
+
+👉 If app is not accessible:
+
+- Check correct port is open
+- Verify security group / firewall
+- Use:
+
+netstat -tuln
+ss -tuln
+
+---
+
+hashtag#DevOps hashtag#Networking hashtag#Linux hashtag#SRE hashtag#CloudComputing hashtag#Kubernetes hashtag#AWS hashtag#TechInterviews
