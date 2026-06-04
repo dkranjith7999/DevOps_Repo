@@ -1,0 +1,13 @@
+📚 Git Commands 
+As part of my DevOps learning journey, I explored some essential Git commands used for version control and collaboration.
+📌 git init – Initialize a Git repository
+📌 git status – Check repository status
+📌 git add . – Stage all changes
+📌 git commit -m "message" – Save changes with a commit message
+📌 git branch – List branches
+📌 git checkout branch-name – Switch branches
+📌 git merge branch-name – Merge branches
+📌 git pull – Fetch and update local repository
+📌 git push origin main – Push changes to remote repository
+📌 git log – View commit history
+Learning Git is an important step toward mastering DevOps and collaborative software development. 🚀
