@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<project name="MY_FIRST" default="target3">
+
+	<target name="target1">
+        <echo> Hi Ranjith </echo>
+	</target>
+
+        <target name="target2" depends="target1">
+        <echo> Hi Sumanth </echo>
+	</target>
+
+        <target name="target3" depends="target2">
+        <echo> Hi umesh </echo>
+        </target>
+	
+</project>
